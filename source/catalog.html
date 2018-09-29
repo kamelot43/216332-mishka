@@ -6,7 +6,7 @@
 </head>
 <body>
   <header class="page-header">
-    <h1 class="visually-hidden">Каталог товаров Интернет-магазина мягких игрушек "Мишка"</h1>
+    <h1 class="visually-hidden">Интернет-магазин мягких игрушек "Мишка"</h1>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
@@ -29,8 +29,9 @@
             <a href="#">Корзина: <span class="site-list__goods">пока пуста</span></a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
+
   </header>
 
   <main class="page-main">
@@ -74,7 +75,6 @@
               <a href="#" class="products__buy">Добавить в корзину товар</a>
             </div>
           </li>
-
         </ul>
       </div>
     </section>
@@ -90,45 +90,46 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper"></div>
-    <h2 class="page-footer__title">Контакты</h2>
-    <div class="page-footer__contacts contacts">
-      <table class="contacts__list">
-        <tr>
-          <td class="contacts__field">e-mail:</td>
-          <td class="contacts__value">info@mimimishkashop.ru</td>
-        </tr>
-        <tr>
-          <td class="contacts__field">адрес:</td>
-          <td class="contacts__value">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</td>
-        </tr>
-      </table>
-      <div class="page-footer__map map">
-        <a href="#" class="map__link">
-          <img src="http://placehold.it/100x100" alt="Карта проезда" class="map__image">
-        </a>
+    <h2 class="visually-hidden">Обратная связь</h2>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+        </ul>
       </div>
-      <a class="contacts__write button" href="#">Напишите нам</a>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано:</p>
+        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
     </div>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+  </footer>
+
+  <section class="modal modal--cart">
+    <h2 class="visually-hidden">Выбрать размер для товара</h2>
+    <p class="modal__action">Добавить в корзину</p>
+    <div class="modal__size product-size">
+      <ul class="product-size__list">
+        <li class="product-size__item">
+          <button class="product-size__toggle" type="button">S</button>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <li class="product-size__item">
+          <button class="product-size__toggle" type="button">M</button>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <li class="product-size__item">
+          <button class="product-size__toggle" type="button">L</button>
         </li>
       </ul>
+      <a class="button product-size__add" href="https://htmlacademy.ru/intensive/adaptive">Добавить</a>
     </div>
-    <div class="page-footer__copyright copyright">
-      <p class="copyright__text">Разработано:</p>
-      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-    </div>
-  </div>
-</footer>
+  </section>
 
 </body>
 </html>
