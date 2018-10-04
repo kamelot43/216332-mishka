@@ -1,0 +1,7 @@
+.slider__item:not(:first-child) {
+  display: none;
+}
+
+.slider__list {
+  @include list-style;
+}

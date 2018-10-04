@@ -1,0 +1,10 @@
+.main-nav__wrapper {
+  @include container;
+  position: relative;
+
+  outline: 2px solid orange;
+}
+
+.main-nav__toggle {
+  position: absolute;
+}

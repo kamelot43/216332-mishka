@@ -1,0 +1,33 @@
+$base-font-color: #444444;
+$black-font-color: #000000;
+$white-font-color: #ffffff;
+$mentol-font-color: #63d1bb;
+$darker-mentol-font-color: #56c3b2;
+$smoke-font-color: #ececec;
+
+body {
+  width: 320px;
+  margin: 0 auto;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: $base-font-color;
+  font-weight: 400;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  vertical-align: bottom;
+}

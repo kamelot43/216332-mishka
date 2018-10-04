@@ -1,0 +1,18 @@
+@mixin list-style {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+@mixin container {
+  width: 260px;
+  margin: 0 auto;
+}
+
+@mixin title-base-fonts {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: $black-font-color;
+  font-weight: 700;
+}

@@ -1,0 +1,25 @@
+.copyright {
+  display: flex;
+  margin: 23px 0;
+}
+
+.copyright__text{
+  @include list-style;
+
+  padding-left: 38px;
+  padding-right: 30px;
+
+  font-size: 19px;
+  line-height: 18px;
+  color: $black-font-color;
+  font-weight: 700;
+}
+
+.copyright__link {
+  width: 32px;
+  height: 38px;
+
+  font-size: 0;
+
+  outline: 2px solid red;
+}

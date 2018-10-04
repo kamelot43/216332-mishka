@@ -1,0 +1,25 @@
+.advantages__wrapper {
+  @include container;
+}
+
+.advantages__title {
+  @include list-style;
+  @include title-base-fonts;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.advantages__list {
+  @include list-style;
+}
+
+.advantages__item {
+  padding-top: 55px;
+
+  font-size: 17px;
+  line-height: 20px;
+  color: $black-font-color;
+  font-weight: 700;
+
+  outline: 2px solid orange;
+}
