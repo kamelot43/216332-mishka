@@ -26,13 +26,11 @@
 
 .production__descr {
   @include list-style;
+  @include small-description-fonts;
 
   width: 190px;
   margin-top: 30px;
   margin-bottom: 25px;
-
-  font-size: 13px;
-  line-height: 24px;
 }
 
 .production__order {

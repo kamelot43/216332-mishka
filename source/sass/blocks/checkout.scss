@@ -1,0 +1,27 @@
+.checkout__wrapper {
+  @include container;
+}
+
+.checkout__inner {
+  padding: 75px 0;
+  margin-bottom: 25px;
+
+  background-color: $silver-font-color;
+}
+
+.checkout__title {
+  @include list-style;
+
+  font-size: 27px;
+  color: $black-font-color;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.checkout__descr {
+  @include list-style;
+  @include small-description-fonts;
+
+  margin-bottom: 25px;
+}
