@@ -1,0 +1,17 @@
+.range {
+  outline: 2px solid green;
+}
+
+.range-title {
+  @include list-style;
+  margin: 0 auto;
+  width: 260px;
+  padding-top: 73px;
+  padding-bottom: 118px;
+
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $black-font-color;
+  text-align: center;
+}

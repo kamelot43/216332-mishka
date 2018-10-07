@@ -1,0 +1,24 @@
+.catalog__wrapper {
+  @include container;
+}
+
+.catalog__title {
+  @include list-style;
+
+  font-size: 27px;
+  color: $black-font-color;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.catalog__inner {
+  padding: 75px 0;
+  margin-bottom: 30px;
+
+  background-color: $silver-font-color;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}

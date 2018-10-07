@@ -1,0 +1,38 @@
+.production {
+  border: 1px solid transparent;
+  outline: 2px solid orange;
+}
+
+.production__wrapper {
+  @include container;
+}
+
+.production__inner {
+  width: 205px;
+  margin: 0 auto;
+}
+
+.production__title {
+  @include list-style;
+  @include custom-title-fonts;
+
+  position: relative;
+
+  width: 127px;
+  margin-top: 24px;
+  margin-bottom: 26px;
+  padding-left: 90px;
+}
+
+.production__descr {
+  @include list-style;
+  @include small-description-fonts;
+
+  width: 190px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.production__order {
+  margin-bottom: 33px;
+}

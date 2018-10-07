@@ -1,0 +1,58 @@
+.reviews__wrapper {
+  @include container;
+}
+
+.reviews {
+  margin-top: 58px;
+}
+
+.reviews__title {
+  @include list-style;
+  @include title-base-fonts;
+
+  padding-bottom: 29px;
+}
+
+.reviews__descr {
+  @include list-style;
+
+  margin-bottom: 62px;
+}
+
+.reviews__author {
+  @include list-style;
+
+  margin-bottom: 8px;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $black-font-color;
+}
+
+.reviews__author-mail {
+  margin-bottom: 32px;
+
+  font-size: 17px;
+}
+
+.reviews__prev,
+.reviews__next {
+  display: inline-block;
+  width: 128px;
+  height: 50px;
+
+  font-size: 0;
+
+  border: 2px solid $smoke-font-color;
+  background-color: transparent;
+
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.reviews__write {
+  margin-top: 38px;
+  margin-bottom: 52px;
+}
