@@ -1,10 +1,41 @@
+.main-nav {
+  background-color: pink;
+    background-clip: content-box;
+
+    @media (min-width: $tablet-width) {
+    border-bottom: 2px solid #e7e7e7;
+    }
+}
+
+.main-nav__outer {
+  @media (min-width: $desktop-width) {
+    width: 1150px;
+
+    border-bottom: 2px solid #e7e7e7;
+  }
+}
+
 .main-nav__wrapper {
-  @include container;
   position: relative;
 
   outline: 2px solid orange;
+
+  @media (min-width: $tablet-width) {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .main-nav__toggle {
   position: absolute;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
 }

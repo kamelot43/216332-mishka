@@ -2,36 +2,82 @@
 <html lang="ru">
 
 <head>
+
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/mishka-index-mobile.png" );
+    }
+    /* Планшет */
+    @media ( min-width: 760px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/mishka-index-tablet.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/mishka-index-desktop.jpg" );
+      }
+    }
+
+    BODY {
+      opacity: .5;
+    }
+  </style>
+
   <meta charset="utf-8">
-  <title>Интернет-магазин «Мишка»</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/script.js"></script>
   <link href="css/style.css" rel="stylesheet">
+  <title>Интернет-магазин «Мишка»</title>
 </head>
 
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Интернет-магазин мягких игрушек "Мишка"</h1>
     <nav class="main-nav">
+      <div class="main-nav__outer">
       <div class="main-nav__wrapper">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active header-logo">
-            <a class="site-list__link site-list__link--logo  header-logo__link" href="#">
-              <img src="http://placehold.it/86x35" alt="Интернет-магазин «Мишка»" class="header-logo__image">
-            </a>
+        <div class="header-logo">
+          <a class="header-logo__link" href="#">
+            <img src="http://placehold.it/86x35" alt="Интернет-магазин «Мишка»" class="header-logo__image">
+          </a>
+        </div>
+
+        <ul class="main-nav__list site-list site-list--first">
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link site-list__link--order" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+          <!--li class="site-list__item site-list__item--tablet">
+            <a class="site-list__link" href="#">Бессплатная доставка по всей России</a>
           </li>
+          <li class="site-list__item site-list__item--desktop">
+            <a class="site-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="site-list__item site-list__item--desktop">
+            <a class="site-list__link" href="#">Распродажа</a>
+          </li>-->
+        </ul>
+
+        <ul class="main-nav__list site-list site-list--second">
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Поиск по сайту</a>
+            <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list_item">
-            <a class="site-list__link" href="#">Корзина: <span class="site-list__goods">пока пуста</span></a>
+            <a class="site-list__link site-list__link--cart" href="#">Корзина: <span class="site-list__goods">пока пуста</span></a>
           </li>
         </ul>
+
+      </div>
       </div>
     </nav>
   </header>
