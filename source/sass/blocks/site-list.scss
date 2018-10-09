@@ -60,7 +60,6 @@
 
 .site-list__link {
   display: block;
-  //padding: 28px 10px;
   padding: 27px 20px 27px 10px;
 
   font-family: "Open Sans", "Arial", sans-serif;
@@ -92,26 +91,28 @@
   &--cart {
     @media (min-width: $tablet-width) {
       width: 260px;
-      font-size: 0;
+      padding-right: 0;
+
+      text-align: right;
     }
   }
 }
 
 .site-list__item {
-    &--desktop {
-      display: none;
+  &--desktop {
+    display: none;
 
-      @media (min-width: $desktop-width) {
-        display: block;
-      }
+    @media (min-width: $desktop-width) {
+      display: block;
     }
+  }
 
-    &--tablet {
-      display: none;
+  &--tablet {
+    display: none;
 
-      @media (min-width: $tablet-width) {
-        display: block;
-      }
+    @media (min-width: $tablet-width) {
+      display: block;
     }
+  }
 
 }
