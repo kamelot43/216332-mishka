@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     border-bottom: 2px solid #e7e7e7;
   }
+
+  @media (min-width: $desktop-width) {
+    overflow: hidden;
+  }
 }
 
 .main-nav__outer {

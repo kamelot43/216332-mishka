@@ -4,13 +4,13 @@
   @media (min-width: $tablet-width) {
     position: relative;
 
-    padding-bottom: 45px;
+    padding-bottom: 130px;
 
     box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 90px;
+    padding-bottom: 180px;
     padding-left: 172px;
   }
 }
@@ -115,14 +115,14 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 50px;
+    bottom: 130px;
     right: 0px;
 
     width: 70px;
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 95px;
+    bottom: 180px;
   }
 }
 
