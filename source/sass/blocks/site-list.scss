@@ -9,6 +9,7 @@
   &--first {
     @media (min-width: $tablet-width) {
       order: 2;
+      z-index: 1
     }
 
     @media (min-width: $desktop-width) {

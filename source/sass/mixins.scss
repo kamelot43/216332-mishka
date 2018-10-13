@@ -25,6 +25,11 @@
   font-weight: 700;
 }
 
+@mixin title-tablet-fonts {
+  font-size: 43px;
+  line-height: 50px;
+}
+
 @mixin custom-title-fonts {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;

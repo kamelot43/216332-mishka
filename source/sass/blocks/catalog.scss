@@ -1,5 +1,15 @@
 .catalog__wrapper {
   @include container;
+
+  &--inner {
+    position: relative;
+    padding: 75px 0;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 80px;
+    }
+  }
 }
 
 .catalog__title {
@@ -10,15 +20,22 @@
   font-weight: 700;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
+    margin-top: 18px;
+  }
 }
 
 .catalog__inner {
-  padding: 75px 0;
-  margin-bottom: 30px;
-
   background-color: $silver-font-color;
 }
 
 .catalog__item {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+   margin-bottom: 52px;
+  }
 }

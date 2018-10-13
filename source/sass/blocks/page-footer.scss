@@ -39,11 +39,10 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
     margin-top: 60px;
     margin-bottom: 45px;
-
-    font-size: 43px;
-    line-height: 50px;
   }
 
   @media (min-width: $desktop-width) {

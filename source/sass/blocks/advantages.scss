@@ -13,11 +13,10 @@
   padding-bottom: 33px;
 
   @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
     padding-top: 50px;
     padding-bottom: 50px;
-
-    font-size: 43px;
-    line-height: 50px;
   }
 
   @media (min-width: $desktop-width) {
