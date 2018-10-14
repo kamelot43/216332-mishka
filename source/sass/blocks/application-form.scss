@@ -1,10 +1,33 @@
 .application-form__wrapper {
   @include container;
+
+  &--form {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.application-form__outer {
+
+  &--contacts,
+  &--color {
+
+    @media (min-width: $tablet-width) {
+      background-color: $silver-font-color;
+    }
+  }
 }
 
 .application-form__fieldset {
   @include list-style;
   @include container;
+
+  position: relative;
 
   outline: 2px solid orange;
   border: none;
@@ -23,8 +46,6 @@
 
     @media (min-width: $tablet-width) {
       padding-top: 65px;
-
-      background-color: $silver-font-color;
     }
   }
 
@@ -35,22 +56,72 @@
     }
   }
 
-  &--phone,
+  &--phone {
+    margin-top: 35px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $black-font-color;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      display: flex;
+      padding-top: 50px;
+      padding-bottom: 0;
+
+      border-bottom: none;
+    }
+  }
+
   &--email {
     margin-top: 35px;
     padding-top: 15px;
     padding-bottom: 10px;
     border-bottom: 2px solid $black-font-color;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      display: flex;
+      margin-top: 0;
+      padding-top: 25px;
+      padding-bottom: 50px;
+
+      border-bottom: none;
+    }
   }
 
   &--message {
     margin-top: 28px;
     padding-top: 25px;
     padding-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      display: flex;
+      padding-top: 20px;
+    }
   }
 
   &--user {
     padding-top: 30px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 60px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.application-form__label {
+
+  &--user {
+    @media (min-width: $tablet-width) {
+      padding-right: 22px;
+
+      white-space: nowrap;
+    }
   }
 }
 
@@ -68,10 +139,24 @@
   }
 
   &--color {
+
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
+      width: 500px;
+      margin-left: 165px;
+      padding-right: 30px;
+
+      box-sizing: border-box;
+    }
+  }
+
+  &--user {
+
+    @media (min-width: $tablet-width) {
+      margin-left: 165px;
     }
   }
 }
@@ -83,6 +168,38 @@
   font-weight: 700;
 
   text-transform: uppercase;
+
+  &--color,
+  &--user {
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+    }
+  }
+
+  &--phone {
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      bottom: 15px;
+    }
+  }
+
+  &--email {
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 40px;
+    }
+  }
+
+  &--message {
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 40px;
+    }
+  }
 }
 
 .application-form__field {
@@ -95,6 +212,25 @@
 
   &--user {
     margin-top: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $black-font-color;
+    }
+  }
+
+  &--phone,
+  &--email {
+
+    @media (min-width: $tablet-width) {
+      width: 500px;
+      margin-left: auto;
+      padding: 15px;
+
+      border-bottom: 2px solid $black-font-color;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -116,6 +252,21 @@
 
   &--color {
     margin-bottom: 43px;
+    outline: 2px solid orange;
+
+    @media (min-width: $tablet-width) {
+      width: 205px;
+      margin-bottom: 60px;
+
+      box-sizing: border-box;
+    }
+  }
+
+  &--color:nth-last-child(2) {
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &:last-of-type {
@@ -128,6 +279,13 @@
     padding-top: 25px;
     padding-bottom: 12px;
     border-bottom: 2px solid $black-font-color;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      padding-top: 28px;
+
+      border-bottom : none;
+    }
   }
 
   &--user:first-of-type {
@@ -141,6 +299,11 @@
 
   border: 2px solid $base-font-color;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+    margin-left: auto;
+  }
 }
 
 .application-form__footnote {
@@ -148,6 +311,11 @@
 
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .application-form__submit-all {
@@ -156,4 +324,10 @@
   margin-bottom: 55px;
 
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+  }
 }
