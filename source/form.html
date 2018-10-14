@@ -73,32 +73,54 @@ BODY {
   <main class="page-main">
     <section class="checkout">
       <div class="checkout__inner">
-        <div class="checkout__wrapper">
+        <div class="checkout__wrapper checkout__wrapper--inner">
+
+          <ul class="checkout__list market-list">
+            <li class="market-list__item market-list__item--new">
+              <a  class="market-list__link" href="#">Новые поступления</a>
+            </li>
+            <li class="market-list__item market-list__item--sale">
+              <a  class="market-list__link" href="#">Распродажа</a>
+            </li>
+            <li class="market-list__item market-list__item--delivery">
+              Бесплатная доставка по России
+            </li>
+          </ul>
+
+
           <h2 class="checkout__title">Вязание на заказ</h2>
         </div>
       </div>
 
       <div class="checkout__wrapper">
         <p class="checkout__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      </div>
 
-        <form action="https://echo.htmlacademy.ru/ " method="get" class="checkout__form application-form">
-          <fieldset class="application-form__fieldset application-form__fieldset--type">
+      <form action="https://echo.htmlacademy.ru/ " method="get" class="checkout__form application-form">
+
+
+        <fieldset class="application-form__fieldset application-form__fieldset--type">
             <legend class="application-form__legend">Тип</legend>
-            <ul class="application-form__list">
-              <li class="application-form__item">
+
+            <ul class="application-form__list application-form__list--type">
+              <li class="application-form__item application-form__item--type">
                 <input class="application-form__field application-form__field--hidden" type="radio" name="type" id="type-1" checked>
                 <label for="type-1" class="application-form__label application-form__label--indent">Аксессуар для интерьера</label>
               </li>
-              <li class="application-form__item">
+              <li class="application-form__item application-form__item">
                 <input class="application-form__field application-form__field--hidden" type="radio" name="type" id="type-2">
                 <label for="type-2" class="application-form__label application-form__label--indent">Детская игрушка</label>
               </li>
             </ul>
-          </fieldset>
 
-          <fieldset class="application-form__fieldset application-form__fieldset--color">
-            <legend class="application-form__legend">Цвет</legend>
-            <ul class="application-form__list">
+        </fieldset>
+
+
+        <fieldset class="application-form__fieldset application-form__fieldset--color">
+          <legend class="application-form__legend">Цвет</legend>
+
+
+            <ul class="application-form__list application-form__list--color">
               <li class="application-form__item application-form__item--color">
                 <input class="application-form__field application-form__field--hidden" type="checkbox" name="color" id="color-1" checked>
                 <label for="color-1" class="application-form__label application-form__label--indent">Белый</label>
@@ -124,48 +146,58 @@ BODY {
                 <label for="color-6" class="application-form__label application-form__label--indent">Оранжевый</label>
               </li>
             </ul>
-          </fieldset>
 
-          <fieldset class="application-form__fieldset application-form__fieldset--user">
+        </fieldset>
+
+        <fieldset class="application-form__fieldset application-form__fieldset--user">
             <legend class="application-form__legend">ФИО</legend>
             <ul class="application-form__list">
-              <li class="application-form__item application-form__item--custom">
-                <label for="user-name" class="application-form__label  application-form__label--custom">Имя :</label>
-                <input class="application-form__field"  name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
+              <li class="application-form__item application-form__item--user">
+                <label for="user-name" class="application-form__label ">Имя :</label>
+                <input class="application-form__field application-form__field--user"  name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
               </li>
-              <li class="application-form__item application-form__item--custom">
-                <label for="user-lastname" class="application-form__label application-form__label--custom">Фамилия :</label>
-                <input class="application-form__field"  name="user-lastname" id="user-lastname" placeholder="Введите вашу фамилию*" required>
+              <li class="application-form__item application-form__item--user">
+                <label for="user-lastname" class="application-form__label">Фамилия :</label>
+                <input class="application-form__field application-form__field--user"  name="user-lastname" id="user-lastname" placeholder="Введите вашу фамилию*" required>
               </li>
-              <li class="application-form__item application-form__item--custom">
-                <label for="user-patronymic" class="application-form__label application-form__label--custom">Отчество :</label>
-                <input class="application-form__field"  name="user-patronymic" id="user-patronymic" placeholder="Отчество, если желаете" required>
+              <li class="application-form__item application-form__item--user">
+                <label for="user-patronymic" class="application-form__label">Отчество :</label>
+                <input class="application-form__field application-form__field--user"  name="user-patronymic" id="user-patronymic" placeholder="Отчество, если желаете" required>
               </li>
             </ul>
-          </fieldset>
 
-          <fieldset class="application-form__fieldset application-form__fieldset--phone">
+        </fieldset>
+
+        <fieldset class="application-form__fieldset application-form__fieldset--phone">
             <legend class="application-form__legend application-form__legend--phone">ТЕЛ</legend>
+
+
             <input class="application-form__field" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             <label for="phone" class="application-form__label visually-hidden">Номер телефона</label>
-          </fieldset>
 
-          <fieldset class="application-form__fieldset application-form__fieldset--email">
+        </fieldset>
+
+        <fieldset class="application-form__fieldset application-form__fieldset--email">
             <legend class="application-form__legend">E-mail</legend>
+
+
             <input class="application-form__field" name="email" id="email" placeholder="Ваш Email*" required>
             <label for="email" class="application-form__label visually-hidden">Адрес почты</label>
-          </fieldset>
 
-          <fieldset class="application-form__fieldset application-form__fieldset--message">
+        </fieldset>
+
+        <fieldset class="application-form__fieldset application-form__fieldset--message">
             <legend class="application-form__legend">ДОП</legend>
             <textarea class="application-form__textarea" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+        </fieldset>
 
+        <div class="application-form__wrapper">
           <p class="application-form__footnote"><sup>*</sup> Поля обязательны для заполнения</p>
           <button class="application-form__submit-all button" type="submit">Отправить заказ</button>
+        </div>
 
-        </form>
-      </div>
+      </form>
+
     </section>
   </main>
 

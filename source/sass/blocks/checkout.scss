@@ -1,11 +1,18 @@
 .checkout__wrapper {
   @include container;
+
+  &--inner {
+    position: relative;
+    padding: 75px 0;
+    margin-bottom: 22px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 80px;
+    }
+  }
 }
 
 .checkout__inner {
-  padding: 75px 0;
-  margin-bottom: 22px;
-
   background-color: $silver-font-color;
 }
 
@@ -17,6 +24,12 @@
   font-weight: 700;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
+    margin-top: 15px;
+  }
 }
 
 .checkout__descr {
@@ -24,4 +37,11 @@
   @include small-description-fonts;
 
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

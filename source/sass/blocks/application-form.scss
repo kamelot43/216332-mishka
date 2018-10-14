@@ -1,5 +1,10 @@
+.application-form__wrapper {
+  @include container;
+}
+
 .application-form__fieldset {
   @include list-style;
+  @include container;
 
   outline: 2px solid orange;
   border: none;
@@ -8,6 +13,26 @@
   &--type {
     padding-top: 32px;
     padding-bottom: 45px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 70px;
+    }
+  }
+
+  &--color {
+
+    @media (min-width: $tablet-width) {
+      padding-top: 65px;
+
+      background-color: $silver-font-color;
+    }
+  }
+
+  &--type {
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
   }
 
   &--phone,
@@ -19,7 +44,7 @@
   }
 
   &--message {
-    margin-top: 35px;
+    margin-top: 28px;
     padding-top: 25px;
     padding-bottom: 5px;
   }
@@ -31,6 +56,24 @@
 
 .application-form__list {
   @include list-style;
+
+  &--type {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      margin-top: -20px;
+      margin-left: 165px;
+    }
+  }
+
+  &--color {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .application-form__legend {
@@ -42,23 +85,6 @@
   text-transform: uppercase;
 }
 
-.application-form__label {
-  display: block;
-
-  font-size: 17px;
-  line-height: 18px;
-  color: $black-font-color;
-  font-weight: 700;
-
-  &--indent {
-    width: 155px;
-  }
-
-  &--custom {
-    margin-bottom: 12px;
-  }
-}
-
 .application-form__field {
   width: 100%;
   box-sizing: border-box;
@@ -66,11 +92,27 @@
   &--hidden {
     display: none;
   }
+
+  &--user {
+    margin-top: 10px;
+  }
 }
 
 .application-form__item {
+  font-size: 17px;
+  line-height: 18px;
+  color: $black-font-color;
+  font-weight: 700;
   margin-bottom: 25px;
   padding-left: 63px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    padding-left: 83px;
+
+    font-size: 19px;
+    line-height: 18px;
+  }
 
   &--color {
     margin-bottom: 43px;
@@ -80,15 +122,15 @@
     margin-bottom: 0;
   }
 
-  &--custom {
+  &--user {
     margin-bottom: 0;
     padding-left: 0;
-    padding-top: 18px;
-    padding-bottom: 9px;
+    padding-top: 25px;
+    padding-bottom: 12px;
     border-bottom: 2px solid $black-font-color;
   }
 
-  &--custom:first-of-type {
+  &--user:first-of-type {
     padding-top: 0;
   }
 }
