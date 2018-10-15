@@ -7,16 +7,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    overflow: hidden;
-  }
-}
-
-.main-nav__outer {
-  @media (min-width: $desktop-width) {
-    width: 1150px;
-    margin: 0 auto;
-
     border-bottom: 2px solid #e7e7e7;
+
+    overflow: hidden;
   }
 }
 
