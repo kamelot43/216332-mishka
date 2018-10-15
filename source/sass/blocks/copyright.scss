@@ -1,6 +1,12 @@
 .copyright {
   display: flex;
-  margin: 23px 0;
+  margin-top: 48px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top : 0;
+    margin-left: auto;
+  }
 }
 
 .copyright__text {
@@ -13,13 +19,27 @@
   line-height: 18px;
   color: $black-font-color;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    padding-right: 25px;
+  }
 }
 
 .copyright__link {
   width: 32px;
   height: 38px;
+  margin-top: -5px;
 
   font-size: 0;
 
   outline: 2px solid red;
+
+  @media (min-width: $tablet-width) {
+    margin-top : 0;
+  }
 }

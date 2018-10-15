@@ -1,0 +1,18 @@
+.header-logo {
+  display: block;
+  padding: 23px 10px;
+
+  text-align: center;
+  outline: 2px solid green;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    height: 88px;
+    width: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 295px;
+    order: 2;
+  }
+}

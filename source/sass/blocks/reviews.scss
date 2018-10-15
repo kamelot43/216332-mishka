@@ -1,46 +1,107 @@
 .reviews__wrapper {
   @include container;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    padding-bottom: 130px;
+
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 180px;
+    padding-left: 172px;
+  }
 }
 
 .reviews {
-  margin-top: 58px;
+  margin-top: 55px;
+
+  outline: 2px solid green;
+  border: 1px solid transparent;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 35px;
+  }
 }
 
 .reviews__title {
   @include list-style;
   @include title-base-fonts;
 
-  padding-bottom: 29px;
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 45px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .reviews__descr {
   @include list-style;
 
-  margin-bottom: 62px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 780px;
+    margin-bottom: 38px;
+  }
 }
 
 .reviews__author {
   @include list-style;
 
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   color: $black-font-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-mail {
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 
   font-size: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__prev,
 .reviews__next {
   display: inline-block;
   width: 128px;
-  height: 50px;
+  height: 53px;
 
   font-size: 0;
 
@@ -50,9 +111,37 @@
   outline: none;
   box-shadow: none;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 130px;
+    right: 0px;
+
+    width: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 180px;
+  }
+}
+
+.reviews__prev {
+  @media (min-width: $tablet-width) {
+    right: 105px;
+  }
 }
 
 .reviews__write {
-  margin-top: 38px;
-  margin-bottom: 52px;
+  margin-top: 36px;
+  margin-bottom: 48px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+
+    top: 75px;
+    right: 0;
+
+    width: 175px;
+    margin: 0;
+  }
 }

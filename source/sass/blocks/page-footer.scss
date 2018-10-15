@@ -1,25 +1,110 @@
 .page-footer {
+  border: 1px solid transparent;
   outline: 2px solid orange;
+  overflow: hidden;
 }
 
 .page-footer__wrapper {
   @include container;
+
+  &--inner {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      justify-content: flex-start;
+      margin-top: -55px;
+    }
+  }
+
+  &--contacts {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .page-footer__title {
   @include list-style;
 
-  margin-top: 38px;
-  margin-bottom: 38px;
+  margin-top: 35px;
+  margin-bottom: 20px;
 
   font-size: 18px;
   color: $black-font-color;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
+    margin-top: 60px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 140px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .page-footer__contacts {
+
   &--social {
     border: 1px solid transparent;
     background-color: #f1f1f1;
+  }
+
+  &--index{
+
+    @media (min-width: $desktop-width) {
+      margin-top: 100px;
+    }
+  }
+}
+
+.page-footer__map {
+
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+  }
+}
+
+.page-footer__columns {
+
+  @media (min-width: $desktop-width) {
+    @include container;
+
+    display: flex;
+  }
+}
+
+.page-footer__left-column {
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    padding-left: 170px;
+
+    box-sizing: border-box;
+    outline: 2px solid red;
+  }
+}
+
+.page-footer__right-column {
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    outline: 2px solid red;
   }
 }

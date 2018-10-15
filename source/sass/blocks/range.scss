@@ -1,17 +1,43 @@
 .range {
+  background-color: #f9f9f9;
   outline: 2px solid green;
+  overflow: hidden;
+}
+
+.range__wrapper {
+ position: relative;
+
+  @media (min-width: $tablet-width) {
+    @include container;
+  }
 }
 
 .range-title {
   @include list-style;
   margin: 0 auto;
   width: 260px;
-  padding-top: 73px;
-  padding-bottom: 118px;
+  padding-top: 74px;
+  padding-bottom: 121px;
 
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
   color: $black-font-color;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet-fonts;
+
+    width: 500px;
+    padding-top: 150px;
+    padding-bottom: 370px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 615px;
+    padding-bottom: 360px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

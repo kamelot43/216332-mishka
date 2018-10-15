@@ -6,9 +6,10 @@ $darker-mentol-font-color: #56c3b2;
 $smoke-font-color: #ececec;
 $silver-font-color: #f1f1f1;
 
+$tablet-width: 768px;
+$desktop-width: 1150px;
+
 body {
-  width: 320px;
-  margin: 0 auto;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;

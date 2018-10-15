@@ -1,5 +1,10 @@
 .components-list {
   @include list-style;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .components-list__link-wrapper {
@@ -18,6 +23,12 @@
   text-decoration: none;
 
   outline: 2px solid blue;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 37px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .components-list__link-descr {
@@ -34,5 +45,19 @@
 
   &--best-seller {
     background-color: $white-font-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+  }
+
+  &--best-seller {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
   }
 }

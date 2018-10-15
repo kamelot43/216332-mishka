@@ -1,15 +1,58 @@
 .production {
+  margin-bottom: 55px;
   border: 1px solid transparent;
   outline: 2px solid orange;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 .production__wrapper {
   @include container;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 60px;
+
+    box-sizing: border-box;
+  }
+}
+
+.production__video {
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
 }
 
 .production__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 205px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 590px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin: 0;
+    margin-left: auto;
+    margin-top: -280px;
+  }
 }
 
 .production__title {
@@ -19,9 +62,27 @@
   position: relative;
 
   width: 127px;
-  margin-top: 24px;
+  margin-top: 22px;
   margin-bottom: 26px;
   padding-left: 90px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-top: 40px;
+    padding-left: 105px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    order: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    margin-top: 100px;
+    padding-left: 80px;
+  }
+
 }
 
 .production__descr {
@@ -29,10 +90,44 @@
   @include small-description-fonts;
 
   width: 190px;
-  margin-top: 30px;
-  margin-bottom: 25px;
+  margin: 25px 0;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 32px;
+
+    font-size: 15px;
+    line-height: 30px;
+
+    order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .production__order {
+  width: 190px;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 42px;
+
+    order: 4;
+  }
+}
+
+.production__image {
+  //опционально
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 680px;
+  }
 }

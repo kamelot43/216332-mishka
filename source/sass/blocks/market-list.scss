@@ -1,0 +1,53 @@
+.market-list {
+  @include list-style;
+}
+
+.market-list__item {
+  display: none;
+
+  &--delivery {
+    @media (min-width: $tablet-width) {
+      display: block;
+      padding:  13px 0;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      font-size: 15px;
+      line-height: 24px;
+      color: $base-font-color;
+
+      outline: 2px solid orange;
+    }
+  }
+
+  &--sale,
+  &--new {
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+
+      position: absolute;
+      top: 0;
+
+      outline: 2px solid red;
+    }
+  }
+
+  &--sale {
+    @media (min-width: $desktop-width) {
+      left: 220px;
+    }
+  }
+}
+
+.market-list__link {
+  display: block;
+  padding: 16px 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: $black-font-color;
+  font-weight: 700;
+
+  text-decoration: none;
+}

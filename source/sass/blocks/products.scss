@@ -1,57 +1,148 @@
 .products__list {
   @include list-style;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .products__item {
+  border: 1px solid transparent;
   outline: 2px solid orange;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: 315px;
+
+    box-sizing: border-box;
+  }
+
+  &:not(:last-child) {
+
+    @media (min-width: $desktop-width) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .products__price {
   @include list-style;
   @include custom-title-fonts;
 
-  margin-top: 22px;
-  margin-bottom: 30px;
-
   font-size: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 .products__name {
   @include list-style;
   @include custom-title-fonts;
 
-  margin-top: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.products__order {
+  margin: 27px 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 25px;
+
+    box-sizing: border-box;
+    outline: 2px solid red;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    min-height: 145px;
+  }
+
 }
 
 .products__inner {
   width: 205px;
   margin: 0 auto;
 
+  @media (min-width: $tablet-width) {
+    width: 240px;
+    margin: 0;
+  }
+
   &--top {
     border-bottom: 2px solid $smoke-font-color;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
   }
 
   &--bottom {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 275px;
+      padding: 0 5px;
+      padding-top: 25px;
+      box-sizing: border-box;
+      border-top: 2px solid $smoke-font-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: auto;
+      padding-top: 20px;
+    }
   }
 }
 
 .products__descr {
   @include list-style;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   font-size: 13px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .products__buy {
   display: block;
   width: 25px;
   height: 20px;
-  margin-top: 22px;
 
   font-size: 0;
 
   outline: 2px solid;
+}
+
+//Опционально
+.products__image {
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    height: 462px;
+  }
 }

@@ -7,6 +7,14 @@
 @mixin container {
   width: 260px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+  }
 }
 
 @mixin title-base-fonts {
@@ -15,6 +23,16 @@
   line-height: 30px;
   color: $black-font-color;
   font-weight: 700;
+}
+
+@mixin title-tablet-fonts {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin title-desktop-fonts {
+  font-size: 53px;
+  line-height: 57px;
 }
 
 @mixin custom-title-fonts {

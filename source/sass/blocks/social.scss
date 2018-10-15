@@ -1,10 +1,20 @@
 .social__list {
   @include list-style;
   display: flex;
-  justify-content: center;
+  padding-left: 53px;
   margin: 20px 0;
 
   font-size: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-left: 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-left: 345px;
+  }
 }
 
 .social__link {
@@ -13,4 +23,8 @@
   height: 35px;
 
   outline: 2px solid;
+}
+
+.social__item:not(:first-child) {
+  margin-left: 30px;
 }
