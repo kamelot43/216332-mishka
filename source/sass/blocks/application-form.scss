@@ -9,6 +9,10 @@
       align-items: center;
       justify-content: space-between;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 700px;
+    }
   }
 }
 
@@ -31,6 +35,12 @@
 
   outline: 2px solid orange;
   border: none;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 62px;
+
+    box-sizing: border-box;
+  }
 
   &--color,
   &--type {
@@ -84,7 +94,7 @@
 
       display: flex;
       margin-top: 0;
-      padding-top: 25px;
+      padding-top: 27px;
       padding-bottom: 50px;
 
       border-bottom: none;
@@ -136,6 +146,10 @@
       margin-top: -20px;
       margin-left: 165px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 108px;
+    }
   }
 
   &--color {
@@ -151,12 +165,23 @@
 
       box-sizing: border-box;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 730px;
+      margin-left: 115px;
+      padding-right: 0;
+    }
   }
 
   &--user {
 
     @media (min-width: $tablet-width) {
       margin-left: 165px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 700px;
+      margin-left: 112px;
     }
   }
 }
@@ -215,7 +240,8 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
-      padding-bottom: 10px;
+      padding-bottom: 12px;
+      border: none;
       border-bottom: 2px solid $black-font-color;
     }
   }
@@ -228,8 +254,15 @@
       margin-left: auto;
       padding: 15px;
 
+      border: none;
       border-bottom: 2px solid $black-font-color;
+      background-color: transparent;
       box-sizing: border-box;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 700px;
+      margin-left: 110px;
     }
   }
 }
@@ -269,6 +302,13 @@
     }
   }
 
+  &--color:nth-last-child(3) {
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -303,6 +343,11 @@
   @media (min-width: $tablet-width) {
     width: 500px;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin-left: 110px;
   }
 }
 

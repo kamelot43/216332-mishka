@@ -9,6 +9,11 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 80px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding: 95px 0;
+      margin-bottom: 125px;
+    }
   }
 }
 
@@ -30,6 +35,12 @@
 
     margin-top: 15px;
   }
+
+  @media (min-width: $desktop-width) {
+    @include title-desktop-fonts;
+
+    margin-top: 0;
+  }
 }
 
 .checkout__descr {
@@ -43,5 +54,11 @@
 
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 75px;
   }
 }
