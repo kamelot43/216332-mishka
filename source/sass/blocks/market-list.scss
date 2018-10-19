@@ -17,8 +17,6 @@
       font-size: 15px;
       line-height: 24px;
       color: $base-font-color;
-
-      outline: 2px solid orange;
     }
   }
 
@@ -29,8 +27,6 @@
 
       position: absolute;
       top: 0;
-
-      outline: 2px solid red;
     }
   }
 
@@ -50,4 +46,13 @@
   font-weight: 700;
 
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

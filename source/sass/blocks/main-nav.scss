@@ -1,5 +1,5 @@
 .main-nav {
-  background-color: pink;
+  background-color: #ffffff;
   background-clip: content-box;
 
   @media (min-width: $tablet-width) {
@@ -16,13 +16,11 @@
 .main-nav__wrapper {
   position: relative;
 
-  outline: 2px solid orange;
-
   @media (min-width: $tablet-width) {
     @include container;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: -60px;
+    margin-bottom: -65px;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,8 +30,54 @@
 
 .main-nav__toggle {
   position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 2;
+
+  display: block;
+  width: 23px;
+  height: 23px;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+@media (max-width: $mobile-width-only) {
+
+  .main-nav--closed .site-list--first,
+  .main-nav--closed .site-list--second {
+    display: none;
+  }
+
+  .main-nav--opened .site-list--first,
+  .main-nav--opened .site-list--second {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .site-list--first,
+  .main-nav--nojs .site-list--second {
+    display: block;
+  }
+
+}
+
+.main-nav--closed .main-nav__toggle {
+    background-image: url("../img/icon-menu-open.svg");
+}
+
+.main-nav--opened .main-nav__toggle {
+    background-image: url("../img/icon-menu-close.svg");
 }

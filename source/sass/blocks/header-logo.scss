@@ -1,14 +1,18 @@
 .header-logo {
   display: block;
-  padding: 23px 10px;
+  padding: 22px 10px;
 
   text-align: center;
-  outline: 2px solid green;
   box-sizing: border-box;
+  border-top: 1px solid $smoke-font-color;
+  border-bottom: 1px solid $smoke-font-color;
 
   @media (min-width: $tablet-width) {
     height: 88px;
     width: 320px;
+
+    text-align: left;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
