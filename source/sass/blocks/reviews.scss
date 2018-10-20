@@ -18,15 +18,22 @@
 .reviews {
   margin-top: 55px;
 
-  outline: 2px solid green;
   border: 1px solid transparent;
 
   @media (min-width: $tablet-width) {
     margin-top: 30px;
+
+    background-repeat: no-repeat;
+    background-position: -10px -10px;
+    background-image: url("../img/review@1x.jpg");
   }
 
   @media (min-width: $desktop-width) {
+    @include container;
+
     margin-top: 35px;
+
+    background-position: 0 -10px;
   }
 }
 
@@ -105,19 +112,31 @@
 
   font-size: 0;
 
-  border: 2px solid $smoke-font-color;
+  border: 1px solid $smoke-font-color;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: transparent;
 
   outline: none;
   box-shadow: none;
   box-sizing: border-box;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     position: absolute;
     bottom: 130px;
-    right: 0px;
+    right: 10px;
 
     width: 70px;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -126,9 +145,16 @@
 }
 
 .reviews__prev {
+
+  background-image: url("../img/icon-left-arrow.svg");
+
   @media (min-width: $tablet-width) {
-    right: 105px;
+    right: 95px;
   }
+}
+
+.reviews__next {
+  background-image: url("../img/icon-right-arrow.svg");
 }
 
 .reviews__write {
