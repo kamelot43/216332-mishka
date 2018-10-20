@@ -26,6 +26,13 @@
       background-size: auto 25px;
     }
   }
+
+  &--inner {
+
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .page-footer__wrapper {

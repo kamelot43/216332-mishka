@@ -8,8 +8,8 @@
 }
 
 .products__item {
-  border: 1px solid transparent;
-  outline: 2px solid orange;
+  border: 1px solid $smoke-font-color;
+
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -28,6 +28,20 @@
       margin-right: 50px;
     }
   }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px #ececec;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px #ececec;
+  }
+}
+
+.products__link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .products__price {
@@ -65,7 +79,6 @@
     margin: 25px;
 
     box-sizing: border-box;
-    outline: 2px solid red;
   }
 
   @media (min-width: $desktop-width) {
@@ -85,7 +98,7 @@
   }
 
   &--top {
-    border-bottom: 2px solid $smoke-font-color;
+    border-bottom: 1px solid $smoke-font-color;
 
     @media (min-width: $tablet-width) {
       border-bottom: none;
@@ -98,8 +111,8 @@
     padding-top: 20px;
 
     @media (min-width: $tablet-width) {
-      width: 275px;
-      padding: 0 5px;
+      width: 270px;
+      margin: 0 auto;
       padding-top: 25px;
       box-sizing: border-box;
       border-top: 2px solid $smoke-font-color;
@@ -107,6 +120,7 @@
 
     @media (min-width: $desktop-width) {
       width: auto;
+      margin: 0;
       padding-top: 20px;
     }
   }
@@ -130,7 +144,20 @@
 
   font-size: 0;
 
-  outline: 2px solid;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-cart.svg");
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-cart-hover.svg");
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 //Опционально
