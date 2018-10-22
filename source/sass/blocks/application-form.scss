@@ -177,6 +177,10 @@
         height: 50px;
       }
 
+      @media (min-width: $desktop-width) {
+        left: 5px;
+      }
+
     }
 
     &:hover {
@@ -400,6 +404,10 @@
       background-position: 445px 18px;
     }
 
+    @media (min-width: $desktop-width) {
+      background-position: 670px 20px;
+    }
+
 
     &:hover,
     &:focus {
@@ -418,6 +426,10 @@
 
     @media (min-width: $tablet-width) {
       background-position: 445px 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 665px 18px;
     }
 
 
@@ -445,6 +457,10 @@
 
     width: 20px;
     height: 20px;
+
+    @media (min-width: $desktop-width) {
+      left: 20px;
+    }
   }
 
 }
@@ -606,5 +622,10 @@
     width: 230px;
     margin-top: 42px;
     margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 39px;
+    margin-bottom: 43px;
   }
 }
