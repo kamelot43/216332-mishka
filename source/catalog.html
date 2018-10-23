@@ -7,20 +7,20 @@
     background-repeat: no-repeat;
     background-position:  50% 0;
     /* По умолчанию мобильный макет */
-    background-image: url( "img/mishka-catalog-mobile.png" );
+    background-image: url( "img/mishka-catalog-modal-mobile.png" );
   }
   /* Планшет */
   @media ( min-width: 760px ) {
     HTML {
       /* Планшетный макет */
-      background-image: url( "img/mishka-catalog-tablet.jpg" );
+      background-image: url( "img/mishka-catalog-modal-tablet.png" );
     }
   }
   /* Десктоп */
   @media ( min-width: 960px ) {
     HTML {
       /* Десктопный макет */
-      background-image: url( "img/mishka-catalog-desktop.jpg" );
+      background-image: url( "img/mishka-catalog-modal-desktop.png" );
     }
   }
 
@@ -228,10 +228,12 @@
   </footer>
 
   <section class="modal modal--cart">
+    <div class="modal__wrapper">
     <h2 class="visually-hidden">Выбрать размер для товара</h2>
     <p class="modal__action">Добавить в корзину</p>
+      <p class="modal__choose">Выберите размер :</p>
     <div class="modal__size product-size">
-      <ul class="product-size__list">
+      <ul class="modal__list product-size__list">
         <li class="product-size__item">
           <button class="product-size__toggle" type="button">S</button>
         </li>
@@ -242,13 +244,19 @@
           <button class="product-size__toggle" type="button">L</button>
         </li>
       </ul>
-      <a class="button product-size__add" href="https://htmlacademy.ru/intensive/adaptive">Добавить</a>
+      <a class="button product-size__add" href="#">Добавить</a>
+    </div>
     </div>
   </section>
+  <div class="overlay"></div>
 
   <script>
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
+  var catalog = document.querySelector('.catalog');
+  var modal = document.querySelector('.modal--cart');
+  var overlay = document.querySelector('.overlay');
+  var addButton = document.querySelector('.product-size__add');
 
   navMain.classList.remove('main-nav--nojs');
 
@@ -259,6 +267,32 @@
     } else {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
+    }
+  });
+
+  catalog.addEventListener("click", function(event) {
+    event.preventDefault();
+    var target = event.target;
+    if (target.classList.contains("products__buy")) {
+      modal.classList.add("modal-show");
+      overlay.classList.add("overlay-show");
+    }
+  });
+
+  addButton.addEventListener("click", function(event) {
+    event.preventDefault();
+      modal.classList.remove("modal-show");
+      overlay.classList.remove("overlay-show");
+
+  });
+
+
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+      if (modal.classList.contains("modal-show")) {
+        modal.classList.remove("modal-show");
+        overlay.classList.remove("overlay-show");
+      }
     }
   });
 </script>
