@@ -41,11 +41,7 @@
   background-color: $mentol-font-color;
   transition: 500ms ease;
 
-  &:hover {
-    padding-bottom: 5px;
-  }
-
-  &:not(:last-child):before {
+  &:before {
     content: '';
     position: absolute;
     top: 18px;
@@ -75,45 +71,24 @@
 
 
 
-  &--interior:before {
+  &--interior {
+
+  &:before {
     background-image: url("../img/icon-interior.svg");
   }
+}
 
   &--toys {
+
     background-color: $darker-mentol-font-color;
 
     &:before {
       background-image: url("../img/icon-toy.svg");
     }
   }
-
-  &--best-seller {
-    position: relative;
-    background-color: $white-font-color;
-
-    @media (min-width: $tablet-width) {
-
-        width: 100%;
-
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: -10px;
-        left: 0;
-        width: 100%;
-        height: 23px;
-        background-image: url(../img/bg-zigzag-fill.svg);
-        background-repeat: repeat-x;
-        background-size: auto 23px;
-      }
-    }
-  }
-
-
 }
 
-.components-list__item:not(:last-child):hover {
+.components-list__item:hover {
 
   &:before {
     opacity: 0.7;

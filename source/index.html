@@ -39,6 +39,7 @@
 
 <body>
   <header class="page-header">
+    <div class="page-header__wrapper">
     <h1 class="visually-hidden">Интернет-магазин мягких игрушек "Мишка"</h1>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
@@ -86,6 +87,19 @@
         </div>
 
       </nav>
+
+      <ul class="page-header__list market-list">
+        <li class="market-list__item market-list__item--new">
+          <a  class="market-list__link" href="#">Новые поступления</a>
+        </li>
+        <li class="market-list__item market-list__item--sale">
+          <a  class="market-list__link" href="#">Распродажа</a>
+        </li>
+        <li class="market-list__item market-list__item--delivery">
+          Бесплатная доставка по России
+        </li>
+      </ul>
+      </div>
     </header>
 
     <main class="page-main">
@@ -96,18 +110,6 @@
 
           <h2 class="range-title">Милые штуки ручной <br> работы для дома</h2>
           </div>
-
-          <ul class="range__list market-list">
-            <li class="market-list__item market-list__item--new">
-              <a  class="market-list__link" href="#">Новые поступления</a>
-            </li>
-            <li class="market-list__item market-list__item--sale">
-              <a  class="market-list__link" href="#">Распродажа</a>
-            </li>
-            <li class="market-list__item market-list__item--delivery">
-              Бесплатная доставка по России
-            </li>
-          </ul>
 
 
           <ul class="range__list components-list">
@@ -125,44 +127,43 @@
                 </div>
               </a>
             </li>
-            <li class="components-list__item components-list__item--best-seller">
-              <section class="best-seller">
-                <div class="best-seller__wrapper">
-
-                  <h2 class="best-seller__title">Вязаные корзинки</h2>
-                  <p class="best-seller__option">товар недели</p>
-
-                  <div class="best-seller__left-column">
-                    <p class="best-seller__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-                    <table class="best-seller__list">
-                      <tr>
-                        <td class="best-seller__filed">Цвет:</td>
-                        <td class="best-seller__value">«Тиффани»/серый</td>
-                      </tr>
-                      <tr>
-                        <td class="best-seller__filed">Диаметр:</td>
-                        <td class="best-seller__value">25 см</td>
-                      </tr>
-                      <tr>
-                        <td class="best-seller__filed">Высота:</td>
-                        <td class="best-seller__value">15 см</td>
-                      </tr>
-                    </table>
-                  </div>
-
-                  <div class="best-seller__right-column">
-                    <img src="http://placehold.it/260x315" alt="Вязанная корзинка" class="best-seller__image">
-                  </div>
-
-                  <div class="best-seller__price">Цена: 990 руб
-                    <a href="#" class="best-seller__order button">Заказать</a>
-                  </div>
-                </div>
-
-              </section>
-            </li>
           </ul>
         </div>
+
+          <section class="best-seller">
+            <div class="best-seller__wrapper">
+
+              <h2 class="best-seller__title">Вязаные корзинки</h2>
+              <p class="best-seller__option">товар недели</p>
+
+              <div class="best-seller__left-column">
+                <p class="best-seller__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+                <table class="best-seller__list">
+                  <tr>
+                    <td class="best-seller__filed">Цвет:</td>
+                    <td class="best-seller__value">«Тиффани»/серый</td>
+                  </tr>
+                  <tr>
+                    <td class="best-seller__filed">Диаметр:</td>
+                    <td class="best-seller__value">25 см</td>
+                  </tr>
+                  <tr>
+                    <td class="best-seller__filed">Высота:</td>
+                    <td class="best-seller__value">15 см</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="best-seller__right-column">
+                <img src="http://placehold.it/260x315" alt="Вязанная корзинка" class="best-seller__image">
+              </div>
+
+              <div class="best-seller__price">Цена: 990 руб
+                <a href="#" class="best-seller__order button">Заказать</a>
+              </div>
+            </div>
+
+          </section>
 
       </section>
 
@@ -274,10 +275,12 @@
     </footer>
 
     <section class="modal modal--cart">
+      <div class="modal__wrapper">
       <h2 class="visually-hidden">Выбрать размер для товара</h2>
       <p class="modal__action">Добавить в корзину</p>
+        <p class="modal__choose">Выберите размер :</p>
       <div class="modal__size product-size">
-        <ul class="product-size__list">
+        <ul class="modal__list product-size__list">
           <li class="product-size__item">
             <button class="product-size__toggle" type="button">S</button>
           </li>
@@ -288,9 +291,11 @@
             <button class="product-size__toggle" type="button">L</button>
           </li>
         </ul>
-        <a class="button product-size__add" href="https://htmlacademy.ru/intensive/adaptive">Добавить</a>
+        <a class="button product-size__add" href="#">Добавить</a>
+      </div>
       </div>
     </section>
+    <div class="overlay"></div>
 
     <script>
     var navMain = document.querySelector('.main-nav');
