@@ -6,6 +6,9 @@ $darker-mentol-font-color: #56c3b2;
 $smoke-font-color: #ececec;
 $silver-font-color: #f1f1f1;
 
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
 $tablet-width: 768px;
 $desktop-width: 1150px;
 $mobile-width-only: 767px;
@@ -32,5 +35,6 @@ body {
 }
 
 img {
+  height: auto;
   vertical-align: bottom;
 }
