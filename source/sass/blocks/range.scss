@@ -1,7 +1,27 @@
 .range {
   background-color: #f9f9f9;
-  outline: 2px solid green;
+
   overflow: hidden;
+}
+
+.range__inner {
+  width: 260px;
+  margin: 0 auto;
+
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-position: center -20px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: center 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 615px;
+  }
 }
 
 .range__wrapper {
@@ -29,7 +49,7 @@
     @include title-tablet-fonts;
 
     width: 500px;
-    padding-top: 150px;
+    padding-top: 155px;
     padding-bottom: 370px;
   }
 

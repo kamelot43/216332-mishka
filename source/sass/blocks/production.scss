@@ -1,7 +1,6 @@
 .production {
   margin-bottom: 55px;
   border: 1px solid transparent;
-  outline: 2px solid orange;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
@@ -14,6 +13,17 @@
 
 .production__wrapper {
   @include container;
+
+  border: 1px solid $smoke-font-color;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px #ececec;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px #ececec;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -30,6 +40,48 @@
 }
 
 .production__video {
+
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 75px;
+
+    width: 105px;
+    height: 85px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-play.svg");
+
+    cursor: pointer;
+    transition: 300ms ease;
+
+    @media (min-width: $tablet-width) {
+      top: 185px;
+      left: 280px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 190px;
+      left: 285px;
+    }
+  }
+
+  &:hover {
+    &:before {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    &:before {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     order: -1;
@@ -66,6 +118,30 @@
   margin-bottom: 26px;
   padding-left: 90px;
 
+  &:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 25px;
+
+    width: 45px;
+    height: 30px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-video.svg");
+
+    @media (min-width: $tablet-width) {
+      top: -5px;
+      left: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -55px;
+      left: 75px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: auto;
     margin-top: 40px;
@@ -90,7 +166,8 @@
   @include small-description-fonts;
 
   width: 190px;
-  margin: 25px 0;
+  margin-top: 25px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     width: auto;

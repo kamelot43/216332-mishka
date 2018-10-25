@@ -22,14 +22,14 @@
   color: $white-font-color;
   text-decoration: none;
 
-  outline: 2px solid blue;
-
   @media (min-width: $tablet-width) {
     padding-left: 37px;
     font-size: 20px;
     line-height: 30px;
   }
+
 }
+
 
 .components-list__link-descr {
   @include list-style;
@@ -37,27 +37,71 @@
 }
 
 .components-list__item {
+  position: relative;
   background-color: $mentol-font-color;
+  transition: 500ms ease;
 
-  &--toys {
-    background-color: $darker-mentol-font-color;
-  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 15px;
 
-  &--best-seller {
-    background-color: $white-font-color;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.5;
+
+    @media (min-width: $tablet-width) {
+      top: 26px;
+      right: 25px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     width: 334px;
   }
 
-  &--best-seller {
-    @media (min-width: $tablet-width) {
-      width: 100%;
-    }
-  }
 
   @media (min-width: $desktop-width) {
     width: 525px;
   }
+
+
+
+  &--interior {
+
+  &:before {
+    background-image: url("../img/icon-interior.svg");
+  }
+}
+
+  &--toys {
+
+    background-color: $darker-mentol-font-color;
+
+    &:before {
+      background-image: url("../img/icon-toy.svg");
+    }
+  }
+}
+
+.components-list__item:hover {
+
+  &:before {
+    opacity: 0.7;
+  }
+}
+
+.components-list__item:active {
+
+  &:before {
+    opacity: 0.3;
+  }
+}
+
+.components-list__item:active .components-list__link {
+  opacity: 0.3;
 }

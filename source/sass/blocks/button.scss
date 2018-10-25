@@ -14,4 +14,14 @@
 
   border: 2px solid $base-font-color;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: $base-font-color;
+    color: $white-font-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+  }
 }

@@ -1,7 +1,38 @@
 .page-footer {
+  position: relative;
   border: 1px solid transparent;
-  outline: 2px solid orange;
-  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+
+    width: 100%;
+    height: 7px;
+
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+
+    @media (min-width: $tablet-width) {
+      top: -20px;
+
+      height: 15px;
+      background-size: auto 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 25px;
+      background-size: auto 25px;
+    }
+  }
+
+  &--inner {
+
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .page-footer__wrapper {
@@ -27,6 +58,10 @@
       padding-top: 50px;
       padding-bottom: 40px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 55px;
+    }
   }
 }
 
@@ -48,7 +83,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 140px;
+    margin-top: 145px;
 
     font-size: 53px;
     line-height: 57px;
@@ -90,6 +125,13 @@
   }
 }
 
+.page-footer__columns .page-footer__wrapper {
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
 .page-footer__left-column {
 
   @media (min-width: $desktop-width) {
@@ -97,7 +139,41 @@
     padding-left: 170px;
 
     box-sizing: border-box;
-    outline: 2px solid red;
+  }
+}
+
+.page-footer__left-column .page-footer__wrapper {
+  position: relative;
+
+
+  &:after {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: 0px;
+
+      display: block;
+      width: 50px;
+      height: 85px;
+
+      background-image: url(../img/icon-flag.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -10px;
+      left: -110px;
+    }
+
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: auto;
   }
 }
 
@@ -105,6 +181,5 @@
 
   @media (min-width: $desktop-width) {
     width: 525px;
-    outline: 2px solid red;
   }
 }

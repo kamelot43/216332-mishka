@@ -1,3 +1,76 @@
 .modal {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+
   display: none;
+  width: 320px;
+  margin-left: -160px;
+
+  border: 2px solid #c7c7c7;
+  background-color: $white-font-color;
+  box-shadow: 0 6px 10px #c6c6c6;
+  z-index: 5;
+  box-sizing: border-box;
+
+
+  @media (min-width: $tablet-width) {
+    width: 570px;
+    margin-left: -285px;
+  }
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal__wrapper {
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 355px;
+  }
+
+}
+
+.modal__action {
+  @include list-style;
+  @include title-base-fonts ;
+
+  width: 150px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__choose {
+  @include list-style;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.modal__list {
+  @include list-style;
+
+  margin-top: 25px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
 }
