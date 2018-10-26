@@ -88,6 +88,20 @@
   }
 }
 
+.production__video img {
+  width: 260px;
+  height: 150px;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 682px;
+  }
+}
+
 .production__inner {
   display: flex;
   flex-direction: column;
@@ -188,6 +202,8 @@
 .production__order {
   width: 190px;
   margin-bottom: 33px;
+
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     width: 100%;

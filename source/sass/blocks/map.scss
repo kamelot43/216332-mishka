@@ -4,14 +4,45 @@
 
   width: 100%;
 
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
   overflow: hidden;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-mobile@2x.jpg");
+      background-size: 322px 457px;
+    }
+
+    @media (min-width: $tablet-width) {
+
+      background-image: url("../img/map-tablet@1x.jpg");
+      background-position: center;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/map-tablet@2x.jpg");
+          background-size: 768px 457px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+
+      background-image: url("../img/map-desktop@1x.jpg");
+      background-position: center;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/map-desktop@2x.jpg");
+          background-size: 525px 457px;
+        }
+    }
 }
 
-//Временно !!!
-.map__image {
+
+.map__frame {
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    height: 460px;
   }
 }

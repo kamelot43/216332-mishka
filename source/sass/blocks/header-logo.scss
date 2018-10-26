@@ -10,6 +10,7 @@
   @media (min-width: $tablet-width) {
     height: 88px;
     width: 320px;
+    padding: 22px 0;
 
     text-align: left;
     border: none;
@@ -17,6 +18,31 @@
 
   @media (min-width: $desktop-width) {
     width: 295px;
+    padding: 10px 0;
+    padding-left: 45px;
+
     order: 2;
   }
+}
+
+.header-logo__link img {
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+  width: 113px;
+  }
+
+  @media (min-width: $desktop-width) {
+  width: 148px;
+  height: 73px;
+  }
+
+
 }
