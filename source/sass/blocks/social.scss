@@ -25,12 +25,8 @@
   width: 30px;
   height: 35px;
 
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-
-  @media (min-width: $tablet-width) {
-    background-position: bottom;
-  }
 
 
   &:active {

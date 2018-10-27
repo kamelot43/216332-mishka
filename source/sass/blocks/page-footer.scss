@@ -55,12 +55,13 @@
 
     @media (min-width: $tablet-width) {
       display: flex;
-      padding-top: 50px;
+      align-items: flex-start;
+      padding-top: 45px;
       padding-bottom: 40px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 55px;
+      padding-top: 50px;
     }
   }
 }
