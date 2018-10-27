@@ -45,6 +45,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    left: 0;
     padding: 55px 0;
     padding-left: 170px;
 
@@ -62,7 +63,11 @@
     justify-content: space-between;
 
     @media (min-width: $desktop-width) {
+      position: relative;
+
       padding-top: 70px;
+
+      justify-content: flex-start;
     }
   }
 }
@@ -187,7 +192,16 @@
 }
 
 .best-seller__left-column {
+
   @media (min-width: $desktop-width) {
+    margin-left: 60px;
     padding-top: 160px;
+  }
+}
+
+.best-seller__right-column {
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
   }
 }

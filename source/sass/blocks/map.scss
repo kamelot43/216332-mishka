@@ -41,8 +41,5 @@
 
 .map__frame {
   overflow: hidden;
-
-  @media (min-width: $tablet-width) {
-    width: 768px;
-  }
+  width: 100%;
 }
