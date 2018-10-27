@@ -21,7 +21,7 @@
   position: relative;
   background-color: $silver-font-color;
 
-  &:before {
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 23px;
-    background-image: url(../img/bg-zigzag-fill.svg);
+    background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat-x;
     background-size: auto 23px;
   }

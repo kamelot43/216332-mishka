@@ -1,8 +1,3 @@
-.main-nav {
-  //background-color: #ffffff;
-  //background-clip: content-box;
-}
-
 .main-nav__wrapper {
   position: relative;
 
@@ -42,7 +37,6 @@
 }
 
 @media (max-width: $mobile-width-only) {
-
   .main-nav--closed .site-list--first,
   .main-nav--closed .site-list--second {
     display: none;
@@ -61,13 +55,12 @@
   .main-nav--nojs .site-list--second {
     display: block;
   }
-
 }
 
 .main-nav--closed .main-nav__toggle {
-    background-image: url("../img/icon-menu-open.svg");
+  background-image: url("../img/icon-menu-open.svg");
 }
 
 .main-nav--opened .main-nav__toggle {
-    background-image: url("../img/icon-menu-close.svg");
+  background-image: url("../img/icon-menu-close.svg");
 }

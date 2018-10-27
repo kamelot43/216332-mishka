@@ -1,39 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
-  <style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* По умолчанию мобильный макет */
-    background-image: url( "img/mishka-index-mobile.png");
-  }
-  /* Планшет */
-  @media ( min-width: 760px ) {
-    HTML {
-      /* Планшетный макет */
-      background-image: url( "img/mishka-index-tablet.jpg" );
-    }
-  }
-  /* Десктоп */
-  @media ( min-width: 960px ) {
-    HTML {
-      /* Десктопный макет */
-      background-image: url( "img/mishka-index-desktop.jpg" );
-    }
-  }
-
-  BODY {
-    opacity: .5;
-  }
-  </style>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/picturefill.js" async></script>
-  <script src="js/script.js"></script>
   <link href="css/style.css" rel="stylesheet">
   <title>Интернет-магазин «Мишка»</title>
 </head>
@@ -44,15 +14,15 @@
       <h1 class="visually-hidden">Интернет-магазин мягких игрушек "Мишка"</h1>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
-          <button class="main-nav--closed main-nav__toggle" type="button">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="header-logo">
             <a class="header-logo__link" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="../img/logo-desktop.svg">
-                  <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
-                    <img src="../img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
                   </picture>
                 </a>
               </div>
@@ -331,6 +301,6 @@
           </section>
           <div class="overlay"></div>
 
-          <script type="text/javascript" src="js/script-1.js"></script>
+          <script src="js/script.js"></script>
         </body>
         </html>

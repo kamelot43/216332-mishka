@@ -1,25 +1,24 @@
 .market-list {
   @include list-style;
 
-    @media (min-width: $tablet-width) {
-      position: absolute;
-      top: 90px;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 90px;
 
-      display: flex;
-      width: 100%;
+    display: flex;
+    width: 100%;
 
-      z-index: 5;
-    }
+    z-index: 5;
+  }
 }
 
 .market-list__item {
   display: none;
 
   &--delivery {
-
     @media (min-width: $tablet-width) {
       display: block;
-      padding:  16px 0;
+      padding: 16px 0;
       margin-left: auto;
 
       font-size: 15px;
@@ -30,7 +29,6 @@
 
   &--sale,
   &--new {
-
     @media (min-width: $desktop-width) {
       display: block;
       margin-right: 60px;

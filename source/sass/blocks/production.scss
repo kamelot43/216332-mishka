@@ -43,7 +43,7 @@
 
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 30px;
@@ -71,13 +71,13 @@
   }
 
   &:hover {
-    &:before {
+    &::before {
       transform: scale(1.2);
     }
   }
 
   &:active {
-    &:before {
+    &::before {
       transform: scale(0.8);
       opacity: 0.3;
     }
@@ -132,7 +132,7 @@
   margin-bottom: 26px;
   padding-left: 90px;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 5px;
@@ -172,7 +172,6 @@
     margin-top: 100px;
     padding-left: 80px;
   }
-
 }
 
 .production__descr {

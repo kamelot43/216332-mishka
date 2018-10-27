@@ -10,7 +10,7 @@
   &--first {
     @media (min-width: $tablet-width) {
       order: 2;
-      z-index: 6
+      z-index: 6;
     }
 
     @media (min-width: $desktop-width) {
@@ -18,7 +18,7 @@
     }
   }
 
-  &--second{
+  &--second {
     @media (min-width: $tablet-width) {
       order: 1;
     }
@@ -119,7 +119,7 @@
   opacity: 0.6;
 }
 
-.site-list__link:active{
+.site-list__link:active {
   opacity: 0.3;
 }
 
@@ -150,7 +150,6 @@
 }
 
 .site-list__item {
-
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid $smoke-font-color;
     border-bottom: 1px solid $smoke-font-color;
@@ -172,5 +171,4 @@
       display: block;
     }
   }
-
 }

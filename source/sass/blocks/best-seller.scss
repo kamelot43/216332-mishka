@@ -4,8 +4,7 @@
   background-color: $white-font-color;
 
   @media (min-width: $tablet-width) {
-
-    &:before {
+    &::before {
       content: "";
       display: block;
       position: absolute;
@@ -13,15 +12,14 @@
       left: 0;
       width: 100%;
       height: 23px;
-      background-image: url(../img/bg-zigzag-fill.svg);
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       background-size: auto 23px;
     }
   }
 
   @media (min-width: $desktop-width) {
-
-    &:before {
+    &::before {
       top: -15px;
 
       height: 32px;
@@ -192,7 +190,6 @@
 }
 
 .best-seller__left-column {
-
   @media (min-width: $desktop-width) {
     margin-left: 60px;
     padding-top: 160px;
@@ -200,7 +197,6 @@
 }
 
 .best-seller__right-column {
-
   @media (min-width: $desktop-width) {
     margin-left: auto;
   }
