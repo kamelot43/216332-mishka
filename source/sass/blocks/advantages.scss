@@ -1,13 +1,13 @@
 .advantages {
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     display: block;
     width: 100%;
     height: 7px;
-    background-image: url(../img/bg-zigzag-line.svg);
+    background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: auto 6px;
 
@@ -77,7 +77,7 @@
 
   box-sizing: border-box;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -97,8 +97,7 @@
     line-height: 22px;
   }
 
-  &:nth-child(-n+3) {
-
+  &:nth-child(-n + 3) {
     @media (min-width: $tablet-width) {
       margin-right: 35px;
     }
@@ -111,9 +110,9 @@
   &--materials {
     padding-right: 65px;
 
-    &:before {
-    background-image: url("../img/icon-feature-flower.svg");
-  }
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+    }
 
     @media (min-width: $tablet-width) {
       padding-right: 70px;
@@ -123,11 +122,10 @@
   }
 
   &--price {
-
-    &:before {
-    background-image: url("../img/icon-feature-money.svg");
-    background-position: top;
-  }
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+      background-position: top;
+    }
 
     @media (min-width: $tablet-width) {
       order: 3;
@@ -135,10 +133,9 @@
   }
 
   &--likes {
-
-    &:before {
-    background-image: url("../img/icon-feature-heart.svg");
-  }
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+    }
 
     @media (min-width: $tablet-width) {
       order: 5;
@@ -146,11 +143,10 @@
   }
 
   &--packaging {
-
-    &:before {
-    background-image: url("../img/icon-feature-gift.svg");
-    background-position: left;
-  }
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+      background-position: left;
+    }
 
     @media (min-width: $tablet-width) {
       order: 6;
@@ -160,10 +156,10 @@
   &--love {
     padding-right: 45px;
 
-    &:before {
-    background-image: url("../img/icon-feature-ball.svg");
-    background-position: left;
-  }
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+      background-position: left;
+    }
 
     @media (min-width: $tablet-width) {
       order: 2;
@@ -173,18 +169,17 @@
   &--support {
     padding-right: 0;
 
-    &:before {
-    width: 55px;
-    top: 5px;
-    left: -10px;
+    &::before {
+      width: 55px;
+      top: 5px;
+      left: -10px;
 
-    background-image: url("../img/icon-feature-rocket.svg");
-    background-position: top;
-  }
+      background-image: url("../img/icon-feature-rocket.svg");
+      background-position: top;
+    }
 
     @media (min-width: $tablet-width) {
       order: 3;
     }
   }
-
 }

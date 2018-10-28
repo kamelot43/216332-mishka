@@ -18,7 +18,10 @@
 .contacts__item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 334px;
@@ -32,7 +35,7 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
@@ -77,13 +80,14 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-  display: block;
+    display: block;
   }
 }
 
 
 .contacts__write {
   margin: 40px 0;
+
 
   @media (min-width: $tablet-width) {
     width: 225px;

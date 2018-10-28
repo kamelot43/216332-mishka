@@ -27,9 +27,7 @@
     font-size: 20px;
     line-height: 30px;
   }
-
 }
-
 
 .components-list__link-descr {
   @include list-style;
@@ -41,8 +39,8 @@
   background-color: $mentol-font-color;
   transition: 500ms ease;
 
-  &:before {
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     top: 18px;
     right: 15px;
@@ -64,40 +62,33 @@
     width: 334px;
   }
 
-
   @media (min-width: $desktop-width) {
     width: 525px;
   }
 
-
-
   &--interior {
-
-  &:before {
-    background-image: url("../img/icon-interior.svg");
+    &::before {
+      background-image: url("../img/icon-interior.svg");
+    }
   }
-}
 
   &--toys {
-
     background-color: $darker-mentol-font-color;
 
-    &:before {
+    &::before {
       background-image: url("../img/icon-toy.svg");
     }
   }
 }
 
 .components-list__item:hover {
-
-  &:before {
+  &::before {
     opacity: 0.7;
   }
 }
 
 .components-list__item:active {
-
-  &:before {
+  &::before {
     opacity: 0.3;
   }
 }

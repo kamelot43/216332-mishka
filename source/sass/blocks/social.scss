@@ -28,6 +28,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
+
   &:active {
     opacity: 0.3;
   }
@@ -46,7 +47,6 @@
     &:hover {
       background-image: url("../img/icon-fb-hover.svg");
     }
-
   }
 
   &--twitter {
@@ -56,7 +56,6 @@
       background-image: url("../img/icon-twitter-hover.svg");
     }
   }
-
 }
 
 .social__item:not(:first-child) {

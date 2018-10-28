@@ -10,7 +10,7 @@
   &--first {
     @media (min-width: $tablet-width) {
       order: 2;
-      z-index: 6
+      z-index: 6;
     }
 
     @media (min-width: $desktop-width) {
@@ -18,7 +18,7 @@
     }
   }
 
-  &--second{
+  &--second {
     @media (min-width: $tablet-width) {
       order: 1;
     }
@@ -66,9 +66,11 @@
   position: relative;
 
   display: block;
+  width: 260px;
+  margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 26px;
-  padding-left: 65px;
+  padding-left: 45px;
   padding-right: 10px;
 
   font-family: "Open Sans", "Arial", sans-serif;
@@ -79,23 +81,18 @@
   text-decoration: none;
 
   box-sizing: border-box;
-  border-top: 1px solid $smoke-font-color;
-  border-bottom: 1px solid $smoke-font-color;
 
-  /*&--logo {
-    padding: 22px 10px;
-  }
-  */
 
   @media (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
     padding-left: 10px;
-
-    border: none;
   }
 
   &--search {
     @media (min-width: $tablet-width) {
       width: 84px;
+      height: 100%;
 
       font-size: 0;
       border-left: 1px solid $silver-font-color;
@@ -122,30 +119,15 @@
   opacity: 0.6;
 }
 
-.site-list__link:active{
+.site-list__link:active {
   opacity: 0.3;
 }
 
-.site-list__search-icon {
-  position: absolute;
-  top: 32px;
-  left: 25px;
-
-  width: 18px;
-  height: 18px;
-
-  opacity: 0.2;
-
-  @media (min-width: $tablet-width) {
-    top: 35px;
-    left: 32px;
-  }
-}
-
+.site-list__search-icon,
 .site-list__cart-icon {
   position: absolute;
   top: 32px;
-  left: 21px;
+  left: 0;
 
   width: 21px;
   height: 18px;
@@ -158,14 +140,7 @@
   }
 }
 
-.site-list__link--cart:hover .site-list__cart-icon {
-  opacity: 1;
-
-  path {
-    fill: $mentol-font-color;
-  }
-}
-
+.site-list__link--cart:hover .site-list__cart-icon,
 .site-list__link--search:hover .site-list__search-icon {
   opacity: 1;
 
@@ -175,6 +150,12 @@
 }
 
 .site-list__item {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $smoke-font-color;
+    border-bottom: 1px solid $smoke-font-color;
+  }
+
+
   &--desktop {
     display: none;
 
@@ -190,5 +171,4 @@
       display: block;
     }
   }
-
 }
