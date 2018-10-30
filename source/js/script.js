@@ -35,11 +35,13 @@ if (bestSellerBtn) {
   });
 }
 
+if (addButton) {
 addButton.addEventListener("click", function(event) {
   event.preventDefault();
   modal.classList.remove("modal-show");
   overlay.classList.remove("overlay-show");
 });
+}
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {

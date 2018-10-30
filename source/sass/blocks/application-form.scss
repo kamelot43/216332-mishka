@@ -1,3 +1,8 @@
+.application-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .application-form__wrapper {
   @include container;
 
@@ -20,8 +25,8 @@
     margin-top: 30px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 50px;
-      padding-top: 45px;
+      margin-top: 5px;
+      padding-top: 30px;
       padding-bottom: 35px;
     }
   }
@@ -37,6 +42,9 @@
 .application-form__fieldset {
   @include list-style;
   @include container;
+
+  display: flex;
+  flex-direction: column;
 
   position: relative;
 
@@ -65,7 +73,7 @@
 
   &--color,
   &--type {
-    padding-top: 49px;
+    padding-top: 35px;
     padding-bottom: 45px;
 
     @media (min-width: $tablet-width) {
@@ -75,19 +83,24 @@
 
   &--color {
     @media (min-width: $tablet-width) {
-      padding-top: 65px;
+      padding-top: 45px;
     }
   }
 
   &--type {
     @media (min-width: $tablet-width) {
-      padding-top: 17px;
+      padding-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 0;
+      padding-bottom: 70px;
     }
   }
 
   &--phone {
     position: relative;
-    padding-top: 30px;
+    padding-top: 15px;
 
     @media (min-width: $tablet-width) {
       position: relative;
@@ -103,7 +116,7 @@
   }
 
   &--email {
-    margin-top: 30px;
+    margin-top: 15px;
     padding-top: 30px;
 
     &::before {
@@ -124,7 +137,7 @@
 
   &--message {
     margin-top: 35px;
-    padding-top: 40px;
+    padding-top: 25px;
     padding-bottom: 15px;
 
     @media (min-width: $tablet-width) {
@@ -137,10 +150,10 @@
   }
 
   &--user {
-    padding-top: 45px;
+    padding-top: 25px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 60px;
+      padding-top: 50px;
       margin-bottom: 40px;
     }
   }
@@ -236,12 +249,17 @@
 .application-form__list {
   @include list-style;
 
+  display: flex;
+  flex-direction: column;
+
   &--type {
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: column;
+
+      width: 500px;
       margin-top: -20px;
-      margin-left: 165px;
+      margin-left: auto;
     }
 
     @media (min-width: $desktop-width) {
@@ -251,12 +269,11 @@
 
   &--color {
     @media (min-width: $tablet-width) {
-      display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 500px;
-      margin-left: 165px;
+      margin-left: auto;
       padding-right: 30px;
 
       box-sizing: border-box;
@@ -271,7 +288,8 @@
 
   &--user {
     @media (min-width: $tablet-width) {
-      margin-left: 165px;
+      width: 500px;
+      margin-left: auto;
     }
 
     @media (min-width: $desktop-width) {
@@ -282,8 +300,7 @@
 }
 
 .application-form__legend {
-  position: absolute;
-  top: 0;
+  position: relative;
 
   font-size: 17px;
   line-height: 16px;
@@ -304,21 +321,14 @@
   &--phone,
   &--email {
     @media (min-width: $tablet-width) {
-      top: 20px;
+      top: 40px;
     }
   }
 
-  /*&--email {
-
-  @media (min-width: $tablet-width) {
-  position: absolute;
-  top: 40px;
-}
-}*/
 
   &--message {
     @media (min-width: $tablet-width) {
-      top: 35px;
+      top: 55px;
     }
   }
 }
@@ -332,6 +342,7 @@
 
   border: none;
   box-sizing: border-box;
+  background-color: transparent;
 
   @include placeholder {
     opacity: 0.3;
@@ -486,6 +497,9 @@
 .application-form__item {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+
   font-size: 17px;
   line-height: 18px;
   color: $black-font-color;
@@ -533,8 +547,6 @@
     margin-bottom: 0;
     padding-left: 0;
     margin-top: 22px;
-    //padding-top: 22px;
-    //padding-bottom: 11px;
     border-bottom: 2px solid $black-font-color;
 
     box-sizing: border-box;
@@ -546,9 +558,9 @@
     }
 
     @media (min-width: $tablet-width) {
-      display: flex;
+      flex-direction: row;
+
       height: 35px;
-      //padding-top: 35px;
       padding-bottom: 0;
       margin-top: 42px;
 
@@ -609,8 +621,8 @@
 
 .application-form__submit-all {
   width: 100%;
-  margin-top: 35px;
-  margin-bottom: 45px;
+  margin-top: 32px;
+  margin-bottom: 55px;
 
   background-color: transparent;
 

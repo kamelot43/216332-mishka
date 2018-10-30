@@ -2,6 +2,11 @@
   background-color: #f9f9f9;
 
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-top: -60px;
+  }
 }
 
 .range__inner {

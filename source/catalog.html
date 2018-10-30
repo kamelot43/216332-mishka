@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url( "img/mishka-catalog-mobile.png" );
+  }
+  /* Планшет */
+  @media ( min-width: 760px ) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/mishka-catalog-tablet.jpg" );
+    }
+  }
+  /* Десктоп */
+  @media ( min-width: 960px ) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/mishka-catalog-desktop.jpg" );
+    }
+  }
+
+  BODY {
+    opacity: .5;
+  }
+  </style>
   <meta charset="utf-8">
   <title>Каталог товаров "Мишка"</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/script-2.js"></script>
   <script src="js/picturefill.js" async></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -11,7 +38,6 @@
   <header class="page-header">
 
     <div class="page-header__wrapper">
-      <h1 class="visually-hidden">Интернет-магазин мягких игрушек "Мишка"</h1>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <button class="main-nav__toggle" type="button">
@@ -76,7 +102,7 @@
             </li>
 
             <li class="market-list__item market-list__item--delivery">
-              Бесплатная доставка по России
+            <p class="market-list__advantage">Бесплатная доставка по России</p>
             </li>
           </ul>
         </div>
@@ -86,7 +112,7 @@
         <section class="catalog">
           <div class="catalog__inner">
             <div class="catalog__wrapper catalog__wrapper--inner">
-              <h2 class="catalog__title">Каталог товаров</h2>
+              <h1 class="catalog__title">Каталог товаров</h2>
             </div>
           </div>
 
