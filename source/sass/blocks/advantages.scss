@@ -1,5 +1,11 @@
 .advantages {
   position: relative;
+}
+
+.advantages__wrapper {
+  @include container;
+
+  position: relative;
 
   &::before {
     content: "";
@@ -25,11 +31,10 @@
   }
 }
 
-.advantages__wrapper {
-  @include container;
-
+.advantages__inner {
   @media (min-width: $desktop-width) {
     width: 700px;
+    margin: 0 auto;
   }
 }
 
