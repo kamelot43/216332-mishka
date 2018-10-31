@@ -1,11 +1,10 @@
 .social__list {
   @include list-style;
   display: flex;
-  padding: 20px 0;
+
   padding-left: 53px;
 
   font-size: 0;
-  border-bottom: 1px solid #e5e5e5;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -22,12 +21,12 @@
 
 .social__link {
   display: inline-flex;
+  vertical-align: middle;
   width: 30px;
   height: 35px;
 
   background-position: center;
   background-repeat: no-repeat;
-
 
   &:active {
     opacity: 0.3;

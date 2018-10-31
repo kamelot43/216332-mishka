@@ -1,3 +1,11 @@
+.checkout {
+  @media (min-width: $tablet-width) {
+    margin-top: -55px;
+
+    border-top: 2px solid #e7e7e7;
+  }
+}
+
 .checkout__wrapper {
   @include container;
 
