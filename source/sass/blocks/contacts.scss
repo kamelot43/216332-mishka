@@ -86,20 +86,3 @@
     display: block;
   }
 }
-
-
-.contacts__write {
-  margin: 36px 0;
-
-
-  @media (min-width: $tablet-width) {
-    width: 225px;
-    margin: 55px 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    margin-top: 5px;
-    margin-left: 177px;
-  }
-}
