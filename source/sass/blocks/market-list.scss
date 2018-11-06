@@ -5,7 +5,9 @@
     position: relative;
 
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+
+    width: 780px;
 
     z-index: 5;
   }

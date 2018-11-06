@@ -53,23 +53,3 @@
     line-height: 57px;
   }
 }
-
-.modal__choose {
-  @include list-style;
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    font-size: 17px;
-  }
-}
-
-.modal__list {
-  @include list-style;
-
-  margin-top: 25px;
-  margin-bottom: 30px;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 20px;
-  }
-}

@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <style>
+      HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/mishka-catalog-modal-mobile.png" );
+      }
+      /* Планшет */
+      @media ( min-width: 760px ) {
+      HTML {
+      /* Планшетный макет */
+      background-image: url( "img/mishka-catalog-modal-tablet.png" );
+      }
+      }
+      /* Десктоп */
+      @media ( min-width: 960px ) {
+      HTML {
+      /* Десктопный макет */
+      background-image: url( "img/mishka-catalog-modal-desktop.png" );
+      }
+      }
+      BODY {
+      opacity: .5;
+      }
+    </style>
     <meta charset="utf-8">
     <title>Каталог товаров "Мишка"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -206,26 +231,31 @@
     </footer>
     <section class="modal modal--cart">
       <div class="modal__wrapper">
-        <h2 class="visually-hidden">Выбрать размер для товара</h2>
-        <p class="modal__action">Добавить в корзину</p>
-        <p class="modal__choose">Выберите размер :</p>
-        <div class="modal__size product-size">
-          <ul class="modal__list product-size__list">
-            <li class="product-size__item">
-              <button class="product-size__toggle" type="button">S</button>
-            </li>
-            <li class="product-size__item">
-              <button class="product-size__toggle" type="button">M</button>
-            </li>
-            <li class="product-size__item">
-              <button class="product-size__toggle" type="button">L</button>
-            </li>
-          </ul>
-          <a class="button product-size__add" href="#">Добавить</a>
-        </div>
+        <h2 class="modal__action">Добавить в корзину</h2>
+        <form action="https://echo.htmlacademy.ru/ " method="post" class="modal__form product-size">
+          <fieldset class="product-size__fieldset">
+            <legend class="product-size__legend">Выберите размер:</legend>
+            <ul class="product-size__list">
+              <li class="product-size__item">
+                <input class="product-size__field"  type="radio" name="item-size" value="s" id="value-s" checked>
+                <label for="value-s" class="product-size__label">s</label>
+              </li>
+              <li class="product-size__item">
+                <input class="product-size__field"  type="radio" name="item-size" value="m" id="value-m" >
+                <label for="value-m" class="product-size__label">m</label>
+              </li>
+              <li class="product-size__item">
+                <input class="product-size__field"  type="radio" name="item-size" value="l" id="value-l" >
+                <label for="value-l" class="product-size__label">l</label>
+              </li>
+            </ul>
+            <button class="button product-size__add" type="submit">Добавить</button>
+          </fieldset>
+        </form>
       </div>
     </section>
     <div class="overlay"></div>
+    <script src="js/script-2.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

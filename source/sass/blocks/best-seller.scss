@@ -38,6 +38,9 @@
   @media (min-width: $tablet-width) {
     @include title-tablet-fonts;
 
+    width: 560px;
+    box-sizing: border-box;
+
     padding: 50px 0;
   }
 
