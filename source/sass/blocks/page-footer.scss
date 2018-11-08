@@ -19,8 +19,11 @@
     }
 
     @media (min-width: $desktop-width) {
+      position: relative;
       justify-content: flex-start;
       margin-top: -55px;
+
+      z-index: 1;
     }
   }
 

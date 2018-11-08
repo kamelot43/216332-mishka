@@ -43,48 +43,49 @@
 
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 75px;
-
-    width: 105px;
-    height: 85px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../img/icon-play.svg");
-
-    cursor: pointer;
-    transition: 300ms ease;
-
-    @media (min-width: $tablet-width) {
-      top: 185px;
-      left: 280px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 190px;
-      left: 285px;
-    }
+  @media (min-width: $tablet-width) {
+    order: -1;
   }
+}
 
-  &:hover {
-    &::before {
-      transform: scale(1.2);
-    }
+.production__btn {
+  position: absolute;
+  top: 30px;
+  left: 75px;
+
+  width: 105px;
+  height: 85px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-play.svg");
+  border: none;
+  background-color: transparent;
+
+  font-size: 0;
+
+  cursor: pointer;
+  outline: none;
+  transition: 300ms ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
   }
 
   &:active {
-    &::before {
-      transform: scale(0.8);
-      opacity: 0.3;
-    }
+    transform: scale(0.8);
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
-    order: -1;
+    top: 185px;
+    left: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 190px;
+    left: 285px;
   }
 }
 
